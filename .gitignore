@@ -1,0 +1,13 @@
+client/node_modules
+
+server/venv
+server/__pycache__
+server/models/latin_bert
+server/models/.DS_Store
+server/scripts/__pycache__
+server/private_gae_env.yaml
+server/app.yaml
+server/Dockerfile
+server/.dockerignore
+server/.gcloudignore
+server/scripts/compare_bert_sents.py
