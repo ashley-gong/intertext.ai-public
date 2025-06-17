@@ -113,16 +113,19 @@ def get_translation():
   urn = data.get("urn")
   full = data.get("full")
   section = data.get("section") 
-  # hard-code Catullus, Sallust, and Eclogues
-  if full == "true" or urn[:45] == "urn:cts:latinLit:phi0690.phi001.perseus-eng2:":
+  # hard-code Eclogues - redundant but more readable
+  if urn[:45] == "urn:cts:latinLit:phi0690.phi001.perseus-eng2:":
+    section = ""
+  if full == "true":
     section = ""
     # hard-code Catullus and Sallust
     if urn == "urn:cts:latinLit:phi0472.phi001.perseus-eng4:":
       section = "1-116"
     elif urn == "urn:cts:latinLit:phi0631.phi001.perseus-eng2:":
       section = "1-61"
-  elif urn[-1] != ":":
-    section = f".{section}"
+  else:
+    if not urn.endswith(":"):
+      section = f".{section}"
   url = f'https://scaife.perseus.org/library/passage/{urn}{section}/text/'
   try:
     response = requests.get(url)

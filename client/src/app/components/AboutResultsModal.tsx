@@ -45,16 +45,6 @@ export default function AboutResultsModal() {
                   quantitative measure of distance between words in this vector space, and higher cosine similarity scores, 
                   which mostly lie between 0 and 1 (rarely down to -1), generally indicate higher semantic similarity between tokens.
                 </p>
-                {/* <p className="text-sm">
-                  Intertext.AI classifies similarity scores based on these general (not yet vetted) ranges:
-                </p>
-                <ul className="text-sm">
-                  <li><b>0.8-1.0: </b>High Similarity</li>
-                  <li><b>0.5-0.8: </b>Moderate Similarity</li>
-                  <li><b>0.3-0.5: </b>Low Similarity</li>
-                  <li><b>0.0-0.3: </b>Very Low/No Similarity</li>
-                  <li><b>-1.0-0.0: </b>No Similarity</li>
-                </ul> */}
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
